@@ -54,6 +54,29 @@ export const useCart = defineStore('cart', {
           const {data:_products}=await useFetch('https://fakestoreapi.com/products')
           this.products=_products
         }
+      },
+      reduceProduct(product_id)
+      {
+          if(!this.cartContent[product_id])
+          {
+            return;
+          }
+          this.cartContent[product_id].quantity-=1;
+
+          if(this.cartContent[product_id].quantity===0)
+          {
+            delete this.cartContent[product_id];
+          }
+      },
+      removeProduct(product_id)
+      {
+          if(!this.cartContent[product_id])
+            {
+              return;
+            }
+
+            delete this.cartContent[product_id];
+
       }
     },
     persist: true,
