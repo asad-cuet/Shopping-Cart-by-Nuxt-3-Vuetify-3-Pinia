@@ -7,6 +7,7 @@ const { resolve } = createResolver(import.meta.url)
 export default defineNuxtConfig({
     modules: [
         '@pinia/nuxt',
+        '@pinia-plugin-persistedstate/nuxt',
         ],
     css: [
         'vuetify/lib/styles/main.sass',

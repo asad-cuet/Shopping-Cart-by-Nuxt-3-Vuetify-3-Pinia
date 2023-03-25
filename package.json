@@ -8,6 +8,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@pinia-plugin-persistedstate/nuxt": "^1.1.1",
     "nuxt": "^3.3.1"
   },
   "dependencies": {

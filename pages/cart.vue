@@ -1,13 +1,14 @@
 <template>
+
     <div>
-        Cart Page
+    Cart
     </div>
-  </template>
-  
-  <script setup>
-  
-  </script>
-  
-  <style lang="scss">
-  
-  </style>
+</template>
+
+<script setup>
+import {useCart} from '@/stores/cart.js'
+const cartStore=useCart()
+
+console.log(cartStore.formattedCart)
+
+</script>

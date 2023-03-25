@@ -7,7 +7,7 @@
 
             <v-spacer></v-spacer>
 
-            <v-btn clsss="text-none" stacked>
+            <v-btn @click="$router.push('/cart')" clsss="text-none" stacked>
                 <v-badge :content="9" color="error">
                     <v-icon>mdi-cart-outline</v-icon>
                 </v-badge>
